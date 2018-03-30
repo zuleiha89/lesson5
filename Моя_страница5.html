@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            var last_step = 'O';
+            function setX(button){
+                if (document.getElementById(button).innerHTML == ""){
+                    if (last_step =='O'){
+                    var new_step = 'X';
+                    last_step = 'X';
+                } else {
+                    new_step = 'O';
+                    last_step = "O";
+                }
+                document.getElementById(button).innerHTML = new_step;
+                }               
+            }
+ 
+        </script>
+        <style>
+            .square {
+                border: 1px solid #999; 
+                height: 34px; 
+                width: 34px; 
+                background: #fff;
+            }
+            #cancel{
+                border: 1px solid #999; 
+                height: 34px; 
+                width: 200px; 
+                background: #fff;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Привет, мир!</h1>
+        <br>Это моя страница для экспериментов.
+        <div align="center" >Здесь будет неизменяющийся текст в центре страницы</div>
+        <div id='dem' >Тут будет изменяющийся текст</div>
+        <div>Тут будет кнопка 
+            <button >Нажми меня</button>
+        </div>
+        <div align="center">
+            <button class="square" id="button1" onclick="setX('button1')" ></button>
+            <button class="square" id="button2" onclick="setX('button2')" ></button>
+            <button class="square" id="button3" onclick="setX('button3')"></button>
+        </div>
+        <div align="center">
+            <button class="square" id="button4" onclick="setX('button4')"></button>
+            <button class="square" id="button5" onclick="setX('button5')"></button>
+            <button class="square" id="button6" onclick="setX('button6')"></button>
+        </div>
+        <div align="center">
+            <button class="square" id="button7" onclick="setX('button7')"></button>
+            <button class="square" id="button8" onclick="setX('button8')"></button>
+            <button class="square" id="button9" onclick="setX('button9')"></button>
+        </div>
+        <div align="center">
+            <button id="cancel" >Отменить ход</button>
+        </div>
+    </body>
+</html>
